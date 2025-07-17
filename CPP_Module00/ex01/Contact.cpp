@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 12:45:50 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/07/16 13:30:40 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/07/17 15:20:12 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ void	Contact::set_phone_number(std::string str)
 	this->phone_number = str;
 }
 
+void	Contact::set_dark_secret(std::string str)
+{
+	this->dark_secret = str;
+}
+
 // Getters: They obtain the value of the attribute. They don't modify it.
 
 std::string	Contact::get_firstname(void) const
@@ -65,3 +70,7 @@ std::string	Contact::get_phone_number(void) const
 	return (this->phone_number);
 }
 
+std::string	Contact::get_dark_secret(void) const
+{
+	return (this->dark_secret);
+}
