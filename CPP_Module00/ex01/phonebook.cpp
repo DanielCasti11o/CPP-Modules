@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 23:34:12 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/07/17 21:35:47 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/07/18 23:06:58 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Phonebook::~Phonebook(void)
 
 void	Phonebook::cases(int field, std::string str)
 {
-	if (std::getline(std::cin, str) && str != "")
+	if (std::getline(std::cin, str) && str != "" && field < 5)
 	{
 		switch (field)
 		{
@@ -58,7 +58,6 @@ void	Phonebook::cases(int field, std::string str)
 			default:
 				break;
 		}
-		field++;
 	}
 }
 
@@ -74,15 +73,15 @@ void	Phonebook::add_contact(void)
 	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter your first name: " << std::endl;
-		cases(index, str);
+		cases(index++, str);
 		std::cout << "Enter your last name: " << std::endl;
-		cases(index, str);
+		cases(index++, str);
 		std::cout << "Enter your Nickname: " << std::endl;
-		cases(index, str);
+		cases(index++, str);
 		std::cout << "Enter your phone number: " << std::endl;
-		cases(index, str);
+		cases(index++, str);
 		std::cout << "Now tell me your darkest secret?" << std::endl;
-		cases(index, str);
+		cases(index++, str);
 		break ;
 	}
 	this->_index++;
@@ -101,6 +100,7 @@ std::string	Phonebook::fix_length(std::string str, unsigned long max)
 std::string Phonebook::spaces(int lenght)
 {
 	std::string	str;
+
 	while (lenght)
 	{
 		str.append(" ");
@@ -125,7 +125,7 @@ int	Phonebook::table(Contact contact[8])
 	i = 0;
 	while (c++ <= '8')
 	{
-		if (contact[c - 1 -'0'].get_firstname().size() && ++i)
+		if (contact[c - 1 - '0'].get_firstname().size() && ++i)
 		{
 			str = c;
 			str = fix_length(str, 10);
@@ -138,6 +138,8 @@ int	Phonebook::table(Contact contact[8])
 			std::cout << "█" << spaces(10 - str.size()) << str;
 			std::cout << "█" << std::endl;
 		}
+		else
+			break ;
 	}
 	std::cout << "█████████████████████████████████████████████" << std::endl;
 	return (i);
@@ -146,15 +148,15 @@ int	Phonebook::table(Contact contact[8])
 void	Phonebook::print(Contact contact)
 {
 	std::cout << "requesting contact information." << std::endl;
-	sleep(0.5);
+	sleep(1);
 	std::cout << "\033[A\33[2K";
-	sleep(0.5);
+	sleep(1);
 	std::cout << "requesting contact information.." << std::endl;
-	sleep(0.5);
+	sleep(1);
 	std::cout << "\033[A\33[2K";
-	sleep(0.5);
+	sleep(1);
 	std::cout << "requesting contact information..." << std::endl;
-	sleep(0.5);
+	sleep(1);
 	if (!contact.get_firstname().size())
 	{
 		std::cout << "Failed to get info!" << std::endl;
@@ -178,9 +180,9 @@ void	Phonebook::search(void)
 	}
 	while (!std::cin.eof())
 	{
+		std::cout << "Select a valid index:" << std::endl;
 		if (std::getline(std::cin, str) && str != "")
 		{
-			std::cout << "Select a valid index:" << std::endl;
 			if (str.size() == 1 && str[0] >= '1' && str[0] <= '8' && \
 				this->_contact[str[0] - 1 - '0'].get_firstname().size())
 				break ;

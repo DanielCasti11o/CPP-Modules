@@ -5,27 +5,26 @@
 #                                                     +:+ +:+         +:+      #
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/15 15:59:21 by daniel-cast       #+#    #+#              #
-#    Updated: 2025/07/18 18:29:08 by daniel-cast      ###   ########.fr        #
+#    Created: 2025/07/14 18:01:45 by daniel-cast       #+#    #+#              #
+#    Updated: 2025/07/17 17:17:07 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
-SRC = phonebook.cpp Contact.cpp main.cpp
+NAME = megaphone
 CC = c++
-CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -g3
+SRC = megaphone.cpp
+CPPFLAGS = -Wall -Werror -Wall -std=c++98
 RM = rm -f
 OBJ = $(SRC: .cpp=.o)
 
-all : $(NAME)
+all: $(NAME)
 
 	@echo "──▒▒▒▒▒▒───▄████▄		"
 	@echo "─▒─▄▒─▄▒──███▄█▀			"
 	@echo "─▒▒▒▒▒▒▒─▐████──█─█		"
 	@echo "─▒▒▒▒▒▒▒──█████▄			"
 	@echo "─▒─▒─▒─▒───▀████▀		"
-
-
+	
 $(NAME) : $(OBJ)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
@@ -38,3 +37,5 @@ fclean:
 re: all fclean
 
 .PHONY: all clean fclean re
+
+

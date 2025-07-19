@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 20:51:08 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/07/18 18:13:42 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/07/18 23:28:56 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/07/18 23:30:40 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Account.hpp"
 
-int main(void)
+Account::Account(int initial_deposit)
 {
-	Phonebook	phb;
-	std::string	str;
 
-	while (str != "EXIT")
-	{
-		std::cout << "Enter the command > ";
-		std::getline(std::cin, str);
-		if (str == "ADD")
-			phb.add_contact();
-		if (str == "SEARCH")
-			phb.search();
-		if (std::cin.eof())
-		{
-			std::cout << std::endl;
-			return (0);
-		}
-	}
-	return (0);
+}
+
+Account::~Account(void)
+{
+
 }
