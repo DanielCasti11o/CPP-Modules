@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
+/*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 23:34:12 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/07/18 23:06:58 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/07/19 13:52:01 by dacastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "phonebook.hpp"
+# include "Phonebook.hpp"
 
 Phonebook::Phonebook(void)
 {
@@ -147,15 +147,15 @@ int	Phonebook::table(Contact contact[8])
 
 void	Phonebook::print(Contact contact)
 {
-	std::cout << "requesting contact information." << std::endl;
+	std::cout << "Requesting contact information." << std::endl;
 	sleep(1);
 	std::cout << "\033[A\33[2K";
 	sleep(1);
-	std::cout << "requesting contact information.." << std::endl;
+	std::cout << "Requesting contact information.." << std::endl;
 	sleep(1);
 	std::cout << "\033[A\33[2K";
 	sleep(1);
-	std::cout << "requesting contact information..." << std::endl;
+	std::cout << "Requesting contact information..." << std::endl;
 	sleep(1);
 	if (!contact.get_firstname().size())
 	{

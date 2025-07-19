@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
+#    By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/14 18:01:45 by daniel-cast       #+#    #+#              #
-#    Updated: 2025/07/17 17:17:07 by daniel-cast      ###   ########.fr        #
+#    Updated: 2025/07/19 13:58:19 by dacastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC = c++
 SRC = megaphone.cpp
 CPPFLAGS = -Wall -Werror -Wall -std=c++98
 RM = rm -f
-OBJ = $(SRC: .cpp=.o)
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
@@ -24,7 +24,7 @@ all: $(NAME)
 	@echo "─▒▒▒▒▒▒▒─▐████──█─█		"
 	@echo "─▒▒▒▒▒▒▒──█████▄			"
 	@echo "─▒─▒─▒─▒───▀████▀		"
-	
+
 $(NAME) : $(OBJ)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
@@ -34,7 +34,7 @@ clean:
 fclean:
 	$(RM) $(NAME) $(OBJ)
 
-re: all fclean
+re: fclean all
 
 .PHONY: all clean fclean re
 
