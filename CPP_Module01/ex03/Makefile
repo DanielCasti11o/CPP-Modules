@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/24 18:13:17 by daniel-cast       #+#    #+#              #
-#    Updated: 2025/07/25 16:17:32 by daniel-cast      ###   ########.fr        #
+#    Created: 2025/07/25 15:21:22 by daniel-cast       #+#    #+#              #
+#    Updated: 2025/07/25 19:00:55 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ZombieHorde
+NAME = BRAIN
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC= main.cpp zombieHorde.cpp Zombie.cpp
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98
+SRC = main.cpp HumanB.cpp HumanA.cpp Weapon.cpp
 RM = rm -f
 OBJ = $(SRC:.cpp=.o)
 
@@ -26,7 +26,7 @@ all: $(NAME)
 	@echo "─▒─▒─▒─▒───▀████▀		"
 
 $(NAME) : $(OBJ)
-	@$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME) > /dev/null 2>&1
+	@$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME) 
 
 clean:
 	@$(RM) $(OBJ) > /dev/null 2>&1

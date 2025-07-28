@@ -5,19 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/24 18:13:17 by daniel-cast       #+#    #+#              #
-#    Updated: 2025/07/25 16:17:32 by daniel-cast      ###   ########.fr        #
+#    Created: 2025/07/28 13:55:25 by daniel-cast       #+#    #+#              #
+#    Updated: 2025/07/28 18:17:06 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ZombieHorde
+NAME = Replace
+SRC = main.cpp
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC= main.cpp zombieHorde.cpp Zombie.cpp
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 OBJ = $(SRC:.cpp=.o)
 
-all: $(NAME)
+all : $(NAME)
 
 	@echo "─▒▒▒▒▒▒▒───▄████▄		"
 	@echo "─▒─▄▒─▄▒──███▄█▀			"
