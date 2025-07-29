@@ -6,18 +6,15 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 17:01:14 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/07/26 15:46:42 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/07/29 15:00:18 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon club)
+HumanA::HumanA(std::string name, Weapon &club): m_name(name), m_club(club)
 {
-	m_name = name;
-	m_club = club;
 	std::cout << m_name << " has been created with armor!" << std::endl;
-
 }
 
 HumanA::~HumanA()
