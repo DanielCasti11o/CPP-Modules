@@ -6,11 +6,11 @@
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/08 20:25:24 by daniel-cast       #+#    #+#              #
-#    Updated: 2025/08/08 20:26:02 by daniel-cast      ###   ########.fr        #
+#    Updated: 2025/08/14 13:21:51 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BSP
+NAME = bsp
 SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
 CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 13:13:40 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/13 18:21:47 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/08 12:22:21 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/11 17:30:06 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ class Fixed
 		~Fixed();
 		int				getRawBits( void ) const;
 		void			setRawBits( int const raw );
-		float			get_value(void) const;
-		void			set_value(int const value);
 		float			toFloat( void ) const;
 		int				toInt( void ) const;
 		Fixed&			operator=(const Fixed& other);
@@ -44,10 +42,10 @@ class Fixed
 		bool			operator!=(const Fixed& other);
 
 		// Arithmetic
-		Fixed			operator+(const Fixed& other) const;
-		Fixed			operator-(const Fixed& other) const;
-		Fixed			operator*(const Fixed& other) const;
-		Fixed			operator/(const Fixed& other) const;
+		Fixed			operator+(const Fixed& other);
+		Fixed			operator-(const Fixed& other);
+		Fixed			operator*(const Fixed& other);
+		Fixed			operator/(const Fixed& other);
 
 		// Increment / Decrement
 		Fixed			operator++(void);

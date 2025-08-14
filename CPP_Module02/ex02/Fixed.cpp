@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 13:13:43 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/13 18:21:57 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/08 12:23:22 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/08 20:16:32 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ bool	Fixed::operator!=(const Fixed& other)
 
 // Operators Arithmetics.
 
-Fixed	Fixed::operator+(const Fixed& other) const
+Fixed	Fixed::operator+(const Fixed& other)
 {
 	Fixed	result;
 	result.setRawBits(this->m_numberValue + other.m_numberValue);
@@ -136,7 +136,7 @@ Fixed	Fixed::operator+(const Fixed& other) const
 	return (result);
 }
 
-Fixed	Fixed::operator-(const Fixed& other) const
+Fixed	Fixed::operator-(const Fixed& other)
 {
 	Fixed	result;
 	result.setRawBits(this->m_numberValue - other.m_numberValue);
@@ -149,14 +149,14 @@ Fixed	Fixed::operator-(const Fixed& other) const
 // (<< 8) == (division) (256 || 2^8) you know!
 
 
-Fixed	Fixed::operator*(const Fixed& other) const
+Fixed	Fixed::operator*(const Fixed& other)
 {
 	Fixed	result;
 	result.setRawBits((this->m_numberValue * other.m_numberValue) >> m_fractBits);
 	return (result);
 }
 
-Fixed	Fixed::operator/(const Fixed& other) const
+Fixed	Fixed::operator/(const Fixed& other)
 {
 	Fixed	result;
 	result.setRawBits((this->m_numberValue / other.m_numberValue) << m_fractBits);
@@ -239,14 +239,4 @@ Fixed&	Fixed::min(Fixed &a, Fixed &b)
 		return (a);
 	else
 		return (b);
-}
-
-float	Fixed::get_value(void) const
-{
-	return (this->toFloat());
-}
-
-void	Fixed::set_value(int const value)
-{
-	this->m_numberValue = value;
 }

@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 13:55:07 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/07/29 15:12:19 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/07/29 17:50:17 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ std::string	replace_word(bool flag, std::string content, char *word1, char *word
 		for (size_t i = 0; i < content.size(); i++)
 		{
 			pos = content.find(word1, i);
-			if (i == pos && wd2.size())
+			if (i == pos && wd2.size() && wd1.size())
 			{
 				buff << wd2;
 				i += wd1.size() - 1;
