@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:53 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/14 13:23:45 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/14 17:31:02 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 class Point
 {
 private:
-	Fixed	x;
-	Fixed	y;
+	Fixed const	x;
+	Fixed const	y;
 public:
 	Point();
 	Point(const Point& value_copy);

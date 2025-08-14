@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:40 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/13 18:21:47 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/14 17:26:10 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ class Fixed
 		Fixed&			operator=(const Fixed& other);
 
 		// Comparison.
-		bool			operator<(const Fixed& other);
-		bool			operator>(const Fixed& other);
-		bool			operator==(const Fixed& other);
-		bool			operator<=(const Fixed& other);
-		bool			operator>=(const Fixed& other);
-		bool			operator!=(const Fixed& other);
+		bool			operator<(const Fixed& other) const;
+		bool			operator>(const Fixed& other) const;
+		bool			operator==(const Fixed& other) const;
+		bool			operator<=(const Fixed& other) const;
+		bool			operator>=(const Fixed& other) const;
+		bool			operator!=(const Fixed& other) const;
 
 		// Arithmetic
 		Fixed			operator+(const Fixed& other) const;

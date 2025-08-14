@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:43 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/13 18:21:57 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/14 17:26:53 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	Fixed::toInt( void ) const
 
 // Operators of comparison.
 
-bool	Fixed::operator<(const Fixed& other)
+bool	Fixed::operator<(const Fixed& other) const
 {
 	if (this->m_numberValue < other.m_numberValue)
 		return (true);
@@ -86,7 +86,7 @@ bool	Fixed::operator<(const Fixed& other)
 	return (false);
 }
 
-bool	Fixed::operator>(const Fixed& other)
+bool	Fixed::operator>(const Fixed& other) const
 {
 	if (this->m_numberValue > other.m_numberValue)
 		return (true);
@@ -94,7 +94,7 @@ bool	Fixed::operator>(const Fixed& other)
 	return (false);
 }
 
-bool	Fixed::operator<=(const Fixed& other)
+bool	Fixed::operator<=(const Fixed& other) const
 {
 	if (this->m_numberValue <= other.m_numberValue)
 		return (true);
@@ -102,7 +102,7 @@ bool	Fixed::operator<=(const Fixed& other)
 	return (false);
 }
 
-bool	Fixed::operator>=(const Fixed& other)
+bool	Fixed::operator>=(const Fixed& other) const
 {
 	if (this->m_numberValue >= other.m_numberValue)
 		return (true);
@@ -110,7 +110,7 @@ bool	Fixed::operator>=(const Fixed& other)
 	return (false);
 }
 
-bool	Fixed::operator==(const Fixed& other)
+bool	Fixed::operator==(const Fixed& other) const
 {
 	if (this->m_numberValue == other.m_numberValue)
 		return (true);
@@ -118,7 +118,7 @@ bool	Fixed::operator==(const Fixed& other)
 	return (false);
 }
 
-bool	Fixed::operator!=(const Fixed& other)
+bool	Fixed::operator!=(const Fixed& other) const
 {
 	if (this->m_numberValue != other.m_numberValue)
 		return (true);
