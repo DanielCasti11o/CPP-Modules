@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/16 21:42:34 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/17 20:05:00 by daniel-cast      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+
+# include "ClapTrap.hpp"
+# include <string>
+# include <cstdlib>
+
+#define YELLOW "\033[33m"
+
+class ScavTrap : public ClapTrap
+{
+public:
+	ScavTrap();
+	ScavTrap(const std::string& target);
+	~ScavTrap();
+
+	void	guardGate();
+};
+
+enum	win
+{
+	A_TIE,
+	PLAYER_1,
+	PLAYER_2
+};
+
+#endif
