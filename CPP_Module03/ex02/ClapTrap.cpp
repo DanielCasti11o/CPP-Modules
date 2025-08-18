@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:36:07 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/18 19:04:06 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/18 19:03:53 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name)
 {
-
 	std::cout << GREEN << "ClapTrap " << name << GREEN << " is created!" << RESET << std::endl;
 	m_name = name;
 	m_Attack_damage = 3;
@@ -49,12 +48,12 @@ ClapTrap::ClapTrap(const ClapTrap& value_copy)
 
 ClapTrap::~ClapTrap()
 {
-		std::cout << RED << "ClapTrap " << get_name() << RED << " is destroyed!" << RESET << std::endl;
+	std::cout << RED << "ClapTrap " << get_name() << RED << " is destroyed!" << RESET << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (!m_Hit_points || m_Hit_points > 10)
+	if (!m_Hit_points || m_Hit_points > 101)
 	{
 		std::cout << RED << "ClapTrap " << m_name << RED << " is destroyed and can’t take any action!" << RESET << std::endl;
 		m_Hit_points = 0;
@@ -72,7 +71,7 @@ void	ClapTrap::attack(const std::string& target)
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	m_Hit_points -= amount;
-	if (!m_Hit_points || m_Hit_points > 10)
+	if (!m_Hit_points || m_Hit_points > 101)
 	{
 		std::cout << RED << "ClapTrap " << m_name << RED << " is destroyed and can’t take any action!" << RESET << std::endl;
 		m_Hit_points = 0;
@@ -83,7 +82,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!m_Hit_points || m_Hit_points > 10)
+	if (!m_Hit_points || m_Hit_points > 101)
 	{
 		std::cout << RED << "ClapTrap " << m_name << RED << " is destroyed and can’t take any action!" << RESET << std::endl;
 		m_Hit_points = 0;
@@ -128,11 +127,20 @@ void	ClapTrap::lookAtStatistics()
 
 // setter
 
-void	ClapTrap::set_damage(unsigned int attack_damage)
+void	ClapTrap::set_handle(int flag, unsigned int newValue)
 {
-	if (m_Attack_damage < attack_damage)
-		std::cout << m_name << " gets angry and increases her attack damage +" << attack_damage << std::endl;
+	if (flag == DAMAGE)
+	{
+		// if (m_Attack_damage < newValue)
+		// 	std::cout << m_name << " gets angry and increases her attack damage +" << newValue << std::endl;
+		// else
+		// 	std::cout << m_name << " is weaker and her attack damage is lowered to -" << newValue << std::endl;
+		m_Attack_damage = newValue;
+	}
+	else if (flag == HIT)
+		m_Hit_points = newValue;
+	else if (flag == ENERGY)
+		m_Energy_points = newValue;
 	else
-		std::cout << m_name << " is weaker and her attack damage is lowered to -" << attack_damage << std::endl;
-	m_Attack_damage = attack_damage;
+		return ;
 }

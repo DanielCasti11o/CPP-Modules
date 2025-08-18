@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/08/15 15:57:15 by daniel-cast       #+#    #+#              #
-#    Updated: 2025/08/15 15:57:51 by daniel-cast      ###   ########.fr        #
+#    Created: 2025/08/18 18:31:12 by daniel-cast       #+#    #+#              #
+#    Updated: 2025/08/18 18:31:36 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
-SRC = main.cpp ClapTrap.cpp 
+NAME = FragTrap
+SRC = main.cpp ClapTrap.cpp FragTrap.cpp
 CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f

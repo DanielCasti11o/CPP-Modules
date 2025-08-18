@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:34:34 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/18 18:59:16 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/18 18:59:26 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ public:
 	};
 
 	std::string		get_name();
-	void			set_name(std::string name);
 	unsigned int	get_handle(int type);
 	void			lookAtStatistics();
 	void			set_handle(int flag, unsigned int newValue);

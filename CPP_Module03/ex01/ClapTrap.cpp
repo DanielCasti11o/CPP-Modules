@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:36:07 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/17 19:55:27 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/18 19:04:02 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,33 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name)
 {
+	std::cout << GREEN << "ClapTrap " << name << GREEN << " is created!" << RESET << std::endl;
 	m_name = name;
 	m_Attack_damage = 3;
 	m_Energy_points = 10;
 	m_Hit_points = 10;
 }
 
+ClapTrap&	ClapTrap::operator=(const ClapTrap& other)
+{
+	if (this != &other)
+	{
+		this->m_name = other.m_name;
+		m_Attack_damage = other.m_Attack_damage;
+		m_Energy_points = other.m_Energy_points;
+		m_Hit_points = other.m_Hit_points;
+	}
+	return (*this);
+}
+
+ClapTrap::ClapTrap(const ClapTrap& value_copy)
+{
+	*this = value_copy;
+}
+
 ClapTrap::~ClapTrap()
 {
+		std::cout << RED << "ClapTrap " << get_name() << RED << " is destroyed!" << RESET << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -106,7 +125,12 @@ void	ClapTrap::lookAtStatistics()
 }
 
 
-// setter
+// setters
+
+void	ClapTrap::set_name(std::string name)
+{
+	this->m_name = name;
+}
 
 void	ClapTrap::set_handle(int flag, unsigned int newValue)
 {

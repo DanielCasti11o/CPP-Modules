@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:34:34 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/14 18:17:45 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/18 18:59:06 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define CLAPTRAP_HPP
 
 # include <iostream>
+
+#define BLACK   "\033[30m"
+#define RED     "\033[31m"
+#define GREEN "\033[32m"
+#define PINK    "\033[35m"
+#define RESET   "\033[0m"
+#define ORANGE "\033[38;5;208m"
 
 class ClapTrap
 {
@@ -25,11 +32,26 @@ private:
 public:
 	ClapTrap();
 	ClapTrap(std::string name);
+	ClapTrap(const ClapTrap& value_copy);
 	~ClapTrap();
 
-	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	void		attack(const std::string& target);
+	void		takeDamage(unsigned int amount);
+	void		beRepaired(unsigned int amount);
+	ClapTrap&	operator=(const ClapTrap& other);
+
+	enum
+	{
+		HIT,
+		ENERGY,
+		DAMAGE
+	};
+
+	std::string		get_name();
+	unsigned int	get_handle(int type);
+	void			lookAtStatistics();
+	void			set_damage(unsigned int attack_damage);
+
 };
 
 

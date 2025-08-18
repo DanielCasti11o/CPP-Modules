@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 21:42:23 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/17 20:16:31 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/18 14:51:21 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	Battle(int winner, ScavTrap &p1, ScavTrap &p2)
 int	main(int argc, char **argv)
 {
 	if (argc != 4)
-		return (std::cout << "Is necessary 3 args. Av[1] = Player 1 && Av[2] = Player 2" << std::endl << "And you can choose who win Av[3] = 1 or 2, 0 is a tie", 0);
+		return (std::cout << "Is necessary 3 args. Av[1] = Player 1 && Av[2] = Player 2" << std::endl << "And you can choose who win Av[3] = 1 or 2, 0 is a tie" << std::endl, 0);
 	ScavTrap	p1(RED + std::string(argv[1]) + RESET);
 	ScavTrap	p2(PINK + std::string(argv[2]) + RESET);
 

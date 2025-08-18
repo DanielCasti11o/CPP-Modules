@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/16 21:42:34 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/18 15:40:29 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/18 15:15:40 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/18 18:42:59 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef	FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-# include "ClapTrap.hpp"
-# include <string>
-# include <cstdlib>
+# define BLUE "\033[34m"
+# define RESET "\033[0m"
 
-#define YELLOW "\033[33m"
+#include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class FragTrap : public ClapTrap
 {
-public:
-	ScavTrap();
-	ScavTrap(const std::string& target);
-	ScavTrap(const ScavTrap& value_copy);
-	~ScavTrap();
+	public:
+		FragTrap();
+		FragTrap(const std::string &name);
+		~FragTrap();
+		FragTrap(const FragTrap& value_copy);
 
-	ScavTrap&	operator=(const ScavTrap& other);
-	void		guardGate();
-};
-
-enum	win
-{
-	A_TIE,
-	PLAYER_1,
-	PLAYER_2
+		FragTrap&	operator=(const FragTrap& other);
+		void		highFivesGuys(void);
 };
 
 #endif
