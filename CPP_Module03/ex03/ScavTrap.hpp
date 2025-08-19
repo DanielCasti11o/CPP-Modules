@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 12:27:41 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/19 12:57:45 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/16 21:42:34 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/19 12:46:01 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-# include "ScavTrap.hpp"
-# include "FragTrap.hpp"
+# include "ClapTrap.hpp"
+# include <string>
+# include <cstdlib>
 
-class DiamondTrap : public FragTrap, public ScavTrap
+#define YELLOW "\033[33m"
+
+class ScavTrap : virtual public ClapTrap
 {
-private:
-	std::string	m_name;
 public:
-	DiamondTrap();
-	DiamondTrap(std::string name);
-	DiamondTrap(DiamondTrap& value_copy);
-	~DiamondTrap();
+	ScavTrap();
+	ScavTrap(const std::string& target);
+	ScavTrap(const ScavTrap& value_copy);
+	~ScavTrap();
 
-	DiamondTrap&	operator=(const DiamondTrap &other);
-	void			whoAmI();
+	ScavTrap&	operator=(const ScavTrap& other);
+	void		guardGate();
+};
+
+enum	win
+{
+	A_TIE,
+	PLAYER_1,
+	PLAYER_2
 };
 
 #endif

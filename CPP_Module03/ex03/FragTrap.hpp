@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 12:27:41 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/19 12:57:45 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/18 15:15:40 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/19 12:45:51 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#ifndef	FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-# include "ScavTrap.hpp"
-# include "FragTrap.hpp"
+# define BLUE "\033[34m"
+# define RESET "\033[0m"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+#include "ClapTrap.hpp"
+
+class FragTrap : virtual public ClapTrap
 {
-private:
-	std::string	m_name;
-public:
-	DiamondTrap();
-	DiamondTrap(std::string name);
-	DiamondTrap(DiamondTrap& value_copy);
-	~DiamondTrap();
+	public:
+		FragTrap();
+		FragTrap(const std::string &name);
+		~FragTrap();
+		FragTrap(const FragTrap& value_copy);
 
-	DiamondTrap&	operator=(const DiamondTrap &other);
-	void			whoAmI();
+		FragTrap&	operator=(const FragTrap& other);
+		void		highFivesGuys(void);
 };
 
 #endif

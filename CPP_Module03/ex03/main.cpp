@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 12:27:41 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/19 12:57:45 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/19 12:26:42 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/19 13:27:28 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+# include "DiamondTrap.hpp"
 
-# include "ScavTrap.hpp"
-# include "FragTrap.hpp"
-
-class DiamondTrap : public FragTrap, public ScavTrap
+int main()
 {
-private:
-	std::string	m_name;
-public:
-	DiamondTrap();
-	DiamondTrap(std::string name);
-	DiamondTrap(DiamondTrap& value_copy);
-	~DiamondTrap();
-
-	DiamondTrap&	operator=(const DiamondTrap &other);
-	void			whoAmI();
-};
-
-#endif
+	
+}
