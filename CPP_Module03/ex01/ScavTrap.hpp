@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 21:42:34 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/18 15:40:29 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/19 17:01:11 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 
 	ScavTrap&	operator=(const ScavTrap& other);
 	void		guardGate();
+	void		attack(std::string target);
 };
 
 enum	win

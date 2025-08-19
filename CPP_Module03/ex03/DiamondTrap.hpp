@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 12:27:41 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/19 12:57:45 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/19 15:50:42 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 
 	DiamondTrap&	operator=(const DiamondTrap &other);
 	void			whoAmI();
+	std::string		get_named();
 };
 
 #endif

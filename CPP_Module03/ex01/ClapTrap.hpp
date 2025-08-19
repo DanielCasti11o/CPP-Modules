@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:34:34 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/18 18:59:16 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/19 15:19:59 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string		m_name;
 	unsigned int	m_Hit_points;
 	unsigned int	m_Energy_points;
