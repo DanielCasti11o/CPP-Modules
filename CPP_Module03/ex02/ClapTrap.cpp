@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 17:36:07 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/18 19:03:53 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/20 16:14:27 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ClapTrap::ClapTrap()
 {
 	m_name = "nil son";
-	m_Attack_damage = 3;
+	m_Attack_damage = 0;
 	m_Energy_points = 10;
 	m_Hit_points = 10;
 }
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name)
 {
 	std::cout << GREEN << "ClapTrap " << name << GREEN << " is created!" << RESET << std::endl;
 	m_name = name;
-	m_Attack_damage = 3;
+	m_Attack_damage = 0;
 	m_Energy_points = 10;
 	m_Hit_points = 10;
 }
