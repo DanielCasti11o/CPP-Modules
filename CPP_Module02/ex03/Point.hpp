@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:53 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/14 17:31:02 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/25 16:56:22 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
 	Point(const float value_x, const float value_y);
 	~Point();
 
+	Point&	Point::operator=(const Point& other) const;
 	Fixed const	&get_x( void ) const;
 	Fixed const	&get_y( void ) const;
 };

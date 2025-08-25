@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:50 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/14 12:28:57 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/25 16:52:56 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Point::Point(void)
 {
-	this->x = 0;
-	this->y = 0;
+	this->x = Fixed(0);
+	this->y = Fixed(0);
 }
 
 Point::Point(const float value_x, const float value_y): x(value_x), y(value_y)
@@ -44,3 +44,9 @@ Fixed const	&Point::get_y(void) const
 }
 
 
+Point&	Point::operator=(const Point& other)
+{
+	if (this != &other)
+		this->x = other.get_x();
+	return (*this);
+}

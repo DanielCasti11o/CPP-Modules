@@ -6,16 +6,16 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 18:59:47 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/23 19:09:15 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/25 11:46:45 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "Cat.hpp"
+# include "Animal.hpp"
 
-class Cat
+class Cat : public Animal
 {
 private:
 	/* data */

@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:13:40 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/14 17:26:10 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/25 16:55:43 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Fixed
 		void			set_value(int const value);
 		float			toFloat( void ) const;
 		int				toInt( void ) const;
-		Fixed&			operator=(const Fixed& other);
+		Fixed&			operator=(const Fixed& other) const;
 
 		// Comparison.
 		bool			operator<(const Fixed& other) const;
