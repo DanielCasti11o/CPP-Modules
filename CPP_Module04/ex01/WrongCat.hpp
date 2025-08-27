@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 11:46:56 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/26 12:43:03 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/27 17:17:12 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/27 17:17:50 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-Cat::Cat(void)
-{
-	this->type = "Cat";
-}
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-Cat::~Cat(void)
+class WrongCat : public Animal
 {
-}
+	private:
+		Brain *brain;
+	public:
+		WrongCat();
+		WrongCat(const WrongCat &other);
+		~WrongCat();
+		WrongCat& operator=(const WrongCat& other);
+		void	makeSound() const;
 
-Cat::Cat(const Cat &other) : Animal(other)
-{
-}
+		Brain& get_brain(void) const;
+};
 
-Cat&	Cat::operator=(const Cat &other)
-{
-	this->type = other.type;
-	return (*this);
-}
-
-void	Cat::makeSound(void) const
-{
-	std::cout << "Meow!" << std::endl;
-}
+#endif

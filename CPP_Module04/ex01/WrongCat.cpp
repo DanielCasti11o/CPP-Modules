@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 11:46:56 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/26 12:43:03 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/27 17:16:33 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/27 17:17:09 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat(void)
+WrongCat::WrongCat(void) : Animal()
 {
-	this->type = "Cat";
+	this->type = "WrongCat";
+	this->brain = new Brain();
 }
 
-Cat::~Cat(void)
-{
-}
-
-Cat::Cat(const Cat &other) : Animal(other)
+WrongCat::~WrongCat(void)
 {
 }
 
-Cat&	Cat::operator=(const Cat &other)
+WrongCat::WrongCat(const WrongCat &other) : Animal(other)
+{
+}
+
+WrongCat&	WrongCat::operator=(const WrongCat &other)
 {
 	this->type = other.type;
 	return (*this);
 }
 
-void	Cat::makeSound(void) const
+void	WrongCat::makeSound(void) const
 {
 	std::cout << "Meow!" << std::endl;
+}
+
+Brain&	WrongCat::get_brain(void) const
+{
+	return (*this->brain);
 }

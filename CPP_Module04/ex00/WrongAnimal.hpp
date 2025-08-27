@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/23 18:42:03 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/26 12:40:04 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/27 17:14:29 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/27 17:15:21 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 # include <string>
 # include <cstdlib>
+# include "Brain.hpp"
 
-class Animal
+class WrongAnimal
 {
 protected:
 	std::string	type;
 public:
-	Animal();
-	Animal(const Animal &other);
-	virtual ~Animal();
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal &other);
+	virtual ~WrongAnimal();
 
-	Animal&	operator=(const Animal& other);
-	virtual void	makeSound() const;
-	std::string	getType() const;
+	WrongAnimal&			operator=(const WrongAnimal& other);
+	void	makeSound() const;
+	std::string		getType() const;
+	virtual Brain&	get_brain(void) const = 0;
 };
 
 #endif

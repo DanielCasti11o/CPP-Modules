@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 11:46:56 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/26 12:43:03 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/23 18:58:09 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/08/26 18:09:30 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-Cat::Cat(void)
-{
-	this->type = "Cat";
-}
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-Cat::~Cat(void)
+class Dog : public Animal
 {
-}
+	private:
+		Brain *brain;
+	public:
+		Dog();
+		Dog(const Dog &other);
+		~Dog();
+		Dog&	operator=(const Dog& other);
+		void	makeSound() const;
 
-Cat::Cat(const Cat &other) : Animal(other)
-{
-}
+		Brain& get_brain(void) const;
+};
 
-Cat&	Cat::operator=(const Cat &other)
-{
-	this->type = other.type;
-	return (*this);
-}
-
-void	Cat::makeSound(void) const
-{
-	std::cout << "Meow!" << std::endl;
-}
+#endif
