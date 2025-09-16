@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 17:16:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/28 19:05:26 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/08/28 19:16:19 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/09/02 17:13:19 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "AAnimal.hpp"
+#include "Brain.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(void) : WrongAnimal()
+int main()
 {
-	this->type = "WrongCat";
-}
+	// AAnimal*	Abs;
+	AAnimal*	dog = new Dog();
+	AAnimal*	cat = new Cat();
 
-WrongCat::~WrongCat(void)
-{
-}
+	// Abs->makeSound();
+	dog->makeSound();
+	cat->makeSound();
 
-WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
-{
-}
-
-WrongCat&	WrongCat::operator=(const WrongCat &other)
-{
-	this->type = other.type;
-	return (*this);
-}
-
-void	WrongCat::makeSound(void) const
-{
-	std::cout << "Meow!" << std::endl;
+	delete dog;
+	delete cat;
+	return (0);
 }

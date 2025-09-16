@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 17:16:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/28 19:05:26 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/09/04 12:08:35 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/09/04 12:23:27 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "AMateria.hpp"
 
-WrongCat::WrongCat(void) : WrongAnimal()
-{
-	this->type = "WrongCat";
-}
-
-WrongCat::~WrongCat(void)
+AMateria::AMateria()
 {
 }
 
-WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
+AMateria::~AMateria()
 {
 }
 
-WrongCat&	WrongCat::operator=(const WrongCat &other)
+AMateria::AMateria(const std::string &type): m_type(type)
 {
-	this->type = other.type;
-	return (*this);
 }
 
-void	WrongCat::makeSound(void) const
+std::string const & AMateria::getType(void) const
 {
-	std::cout << "Meow!" << std::endl;
+	return (this->m_type);
 }
+
+

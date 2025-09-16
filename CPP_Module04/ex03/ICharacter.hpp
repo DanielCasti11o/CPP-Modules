@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 17:16:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/28 19:05:26 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/09/04 13:09:38 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/09/15 19:34:17 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
-WrongCat::WrongCat(void) : WrongAnimal()
-{
-	this->type = "WrongCat";
-}
+# include "AMateria.hpp"
 
-WrongCat::~WrongCat(void)
+class ICharacter
 {
-}
+public:
+	virtual ~ICharacter() {}
+	virtual std::string const & getName() const = 0;
+	virtual void equip(AMateria* m) = 0;
+	virtual void unequip(int idx) = 0;
+	virtual void use(int idx, ICharacter& target) = 0;
+};
 
-WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
-{
-}
 
-WrongCat&	WrongCat::operator=(const WrongCat &other)
-{
-	this->type = other.type;
-	return (*this);
-}
-
-void	WrongCat::makeSound(void) const
-{
-	std::cout << "Meow!" << std::endl;
-}
+#endif

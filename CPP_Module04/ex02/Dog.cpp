@@ -6,13 +6,13 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 11:51:19 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/26 17:56:37 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/08/28 19:26:22 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal()
+Dog::Dog(void) : AAnimal()
 {
 	this->type = "Dog";
 	this->brain = new Brain();
@@ -22,7 +22,7 @@ Dog::~Dog(void)
 {
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+Dog::Dog(const Dog &other) : AAnimal(other)
 {
 }
 

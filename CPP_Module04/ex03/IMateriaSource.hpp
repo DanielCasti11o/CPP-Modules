@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 17:16:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/28 19:05:26 by daniel-cast      ###   ########.fr       */
+/*   Created: 2025/09/04 13:06:40 by daniel-cast       #+#    #+#             */
+/*   Updated: 2025/09/04 13:09:02 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
-WrongCat::WrongCat(void) : WrongAnimal()
-{
-	this->type = "WrongCat";
-}
+# include "AMateria.hpp"
 
-WrongCat::~WrongCat(void)
+class IMateriaSource
 {
-}
+public:
+	virtual ~IMateriaSource() {}
+	virtual void learnMateria(AMateria*) = 0;
+	virtual AMateria* createMateria(std::string const & type) = 0;
+};
 
-WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
-{
-}
-
-WrongCat&	WrongCat::operator=(const WrongCat &other)
-{
-	this->type = other.type;
-	return (*this);
-}
-
-void	WrongCat::makeSound(void) const
-{
-	std::cout << "Meow!" << std::endl;
-}
+#endif
