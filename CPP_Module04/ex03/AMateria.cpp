@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 12:08:35 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/04 12:23:27 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/16 17:38:02 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,21 @@ AMateria::AMateria(const std::string &type): m_type(type)
 {
 }
 
+AMateria::AMateria(const AMateria &other)
+{
+	*this = other;
+}
+
+AMateria&			AMateria::operator=(const AMateria &other)
+{
+	this->m_type = other.m_type;
+	return (*this);
+}
+
 std::string const & AMateria::getType(void) const
 {
 	return (this->m_type);
 }
+
 
 

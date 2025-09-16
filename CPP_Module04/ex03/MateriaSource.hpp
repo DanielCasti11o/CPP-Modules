@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:34:36 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/16 14:49:50 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/16 19:57:44 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@
 class MateriaSource : public IMateriaSource
 {
 public:
-	MateriaSource(/* args */);
-	~MateriaSource();
+	MateriaSource();
+	virtual ~MateriaSource();
+
+	// Interface Methods
+	void learnMateria(AMateria*);
+	AMateria* createMateria(std::string const & type);
 };
-
-
 
 #endif

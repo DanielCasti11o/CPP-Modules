@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 13:09:38 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/15 19:34:17 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/16 17:15:26 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ public:
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
 };
-
 
 #endif
