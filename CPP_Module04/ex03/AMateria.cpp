@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 12:08:35 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/16 17:38:02 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/19 17:54:55 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ std::string const & AMateria::getType(void) const
 {
 	return (this->m_type);
 }
-
 
 

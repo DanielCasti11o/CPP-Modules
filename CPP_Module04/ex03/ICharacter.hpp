@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 13:09:38 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/16 17:15:26 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/19 17:39:20 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

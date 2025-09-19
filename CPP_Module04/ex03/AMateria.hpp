@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 12:05:17 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/16 19:10:42 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/19 17:54:48 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 	AMateria&			operator=(const AMateria &other);
 	std::string const &	getType() const; //Returns the materia type
 	virtual AMateria*	clone() const = 0;
-	virtual void		use(ICharacter& target);
+	virtual void		use(ICharacter& target) = 0;
 };
 
 
