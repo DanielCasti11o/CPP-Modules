@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 11:51:19 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/08/26 17:56:37 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 17:30:41 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ Dog::Dog(void) : Animal()
 
 Dog::~Dog(void)
 {
+	if (brain)
+		delete brain;
 }
 
 Dog::Dog(const Dog &other) : Animal(other)
