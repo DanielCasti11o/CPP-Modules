@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 17:18:56 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/19 17:55:29 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 11:16:31 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,29 @@
 
 Character::Character(void)
 {
+	for (size_t i = 0; i < 4; i++)
+	{
+		m_inventory[i] = NULL;
+	}
+
 }
 
 Character::~Character(void)
 {
+	for (size_t i = 0; i < 4; i++)
+	{
+		if (m_inventory[i])
+			delete m_inventory[i];
+	}
+
 }
 
 Character::Character(std::string name) : m_name(name)
 {
+	for (size_t i = 0; i < 4; i++)
+	{
+		m_inventory[i] = NULL;
+	}
 }
 
 Character::Character(const Character &other)
@@ -51,7 +66,7 @@ void	Character::equip(AMateria* m)
 		if (m_inventory[i] == NULL)
 		{
 			m_inventory[i] = m;
-			std::cout << m_name << " has acquired a new materia type: " << "!" << std::endl;
+			// std::cout << m_name << " has acquired a new materia type: " << m_inventory[i]->getType() << std::endl;
 			return ;
 		}
 	}
@@ -79,7 +94,7 @@ void	Character::use(int idx, ICharacter& target)
 {
 	if (idx < 0 || idx > 4)
 	{
-		std::cout << "index" << idx << " isn`t posible" << std::endl;
+		std::cout << "index " << idx << " isn`t posible" << std::endl;
 		return ;
 	}
 	if (m_inventory[idx])
