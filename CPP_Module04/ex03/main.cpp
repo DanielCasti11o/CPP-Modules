@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 12:08:20 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/22 11:07:02 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 18:08:06 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,26 @@ int main()
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
+	src->learnMateria(new Ice());
+	src->learnMateria(new Ice());
+	src->learnMateria(new Ice());
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	for (int i = 0; i < 2; i++)
+	{
+		tmp = src->createMateria("ice");
+		me->equip(tmp);
+	}
+	for (int i = 0; i < 2; i++)
+	{
+		tmp = src->createMateria("cure");
+		me->equip(tmp);
+	}
 	ICharacter* bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(1, *bob);
+	for (int i = 0; i < 4; i++)
+	{
+		me->use(i, *bob);
+	}
 	delete bob;
 	delete me;
 	delete src;

@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 17:18:56 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/22 11:16:31 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 18:12:01 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ Character::~Character(void)
 		if (m_inventory[i])
 			delete m_inventory[i];
 	}
-
 }
 
 Character::Character(std::string name) : m_name(name)

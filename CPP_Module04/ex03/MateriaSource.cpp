@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 19:54:52 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/22 11:15:51 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 18:15:25 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void	MateriaSource::learnMateria(AMateria* m)
 			return ;
 		}
 	}
+	if (m)
+		delete m;
 	std::cout << "The inventory is full!" << std::endl;
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 19:34:36 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/19 16:33:39 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 18:05:54 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	// Interface Methods
 	void		learnMateria(AMateria*);
 	AMateria*	createMateria(std::string const & type);
-	
+
 };
 
 #endif

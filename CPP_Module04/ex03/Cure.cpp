@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 19:14:03 by daniel-cast       #+#    #+#             */
-/*   Updated: 2025/09/22 11:01:50 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2025/09/22 18:27:58 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,18 @@ Cure::Cure(void) : AMateria("cure")
 {
 }
 
+Cure::Cure(const Cure &other) : AMateria(other.m_type)
+{
+}
+
 Cure::~Cure(void)
 {
+}
+
+const Cure&	Cure::operator=(const Cure &other)
+{
+	this->m_type = other.m_type;
+	return (*this);
 }
 
 AMateria*	Cure::clone(void) const
