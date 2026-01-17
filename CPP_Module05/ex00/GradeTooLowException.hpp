@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   GradeTooLowException.hpp                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 12:35:02 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/17 18:30:15 by dacastil         ###   ########.fr       */
+/*   Created: 2026/01/17 18:37:10 by dacastil          #+#    #+#             */
+/*   Updated: 2026/01/17 18:38:16 by dacastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef GRADETOOLOWEXCEPTION_HPP
+# define GRADETOOLOWEXCEPTION_HPP
 
-# include <cstdlib>
-# include <iostream>
-
-class Bureaucrat
+class GradeTooLowException
 {
 private:
-	const	std::string name;
-	int		grade;
+	/* data */
 public:
-	Bureaucrat();
-	Bureaucrat(const Bureaucrat &other);
-	virtual ~Bureaucrat();
-
-	Bureaucrat&	operator=(const Bureaucrat& other);
-	std::string GetName(void);
-	int			GetGrade(void);
-
-
-	void	incrementGrade(void);
-	void	decrementGrade(void);
+	GradeTooLowException();
+	~GradeTooLowException();
 };
+
 
 #endif
