@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:06:25 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/20 18:33:33 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/01/20 18:32:49 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade)
 		throw (Bureaucrat::GradeTooLowException());
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other)
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.grade)
 {
 	*this = other;
 	if (this->grade < 1)
