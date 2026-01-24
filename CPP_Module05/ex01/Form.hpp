@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
+/*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:56:19 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/21 15:58:45 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/01/24 15:04:32 by dacastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <cstdlib>
+# include "Bureaucrat.hpp"
 
 class Form
 {
@@ -32,9 +33,9 @@ class Form
 	virtual ~Form();
 
 	Form&				operator=(const Form& other);
-	const std::string	getName(void);
-	const int			getGradeToSign(void);
-	const int			getGradeToExecute(void);
+	std::string	getName(void) const;
+	int			getGradeToSign(void) const;
+	int			getGradeToExecute(void) const;
 	bool				stateSigned(void);
 
 		class GradeTooHighException: public std::exception
@@ -50,6 +51,6 @@ class Form
 	};
 };
 
-std::ostream	&operator<<(std::ostream &str, Form const &f);
+std::ostream	&operator<<(std::ostream &str, const Form &f);
 
 #endif
