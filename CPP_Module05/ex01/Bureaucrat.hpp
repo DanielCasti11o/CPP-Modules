@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
+/*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:35:02 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/20 18:32:30 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/01/27 16:34:32 by dacastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <cstdlib>
 # include <iostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -28,8 +30,9 @@ public:
 	virtual ~Bureaucrat();
 
 	const Bureaucrat&	operator=(const Bureaucrat& other);
-	std::string	GetName(void) const;
-	int			GetGrade(void) const;
+	std::string			GetName(void) const;
+	int					GetGrade(void) const;
+	void				signForm(Form &f);
 
 	class GradeTooHighException: public std::exception
 	{

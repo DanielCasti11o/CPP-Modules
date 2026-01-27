@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
+#    By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 17:20:58 by daniel-cast       #+#    #+#              #
-#    Updated: 2026/01/20 17:35:22 by daniel-cast      ###   ########.fr        #
+#    Updated: 2026/01/27 16:36:35 by dacastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Bureaucrat
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -g
 RM = rm -f

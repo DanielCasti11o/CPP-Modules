@@ -6,7 +6,7 @@
 /*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:56:19 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/24 15:04:32 by dacastil         ###   ########.fr       */
+/*   Updated: 2026/01/24 18:11:19 by dacastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ class Form
 	virtual ~Form();
 
 	Form&				operator=(const Form& other);
-	std::string	getName(void) const;
-	int			getGradeToSign(void) const;
-	int			getGradeToExecute(void) const;
-	bool				stateSigned(void);
+	std::string			getName(void) const;
+	int					getGradeToSign(void) const;
+	int					getGradeToExecute(void) const;
+	bool				stateSigned(void) const;
+
+	void				beSigned(const Bureaucrat &b);
 
 		class GradeTooHighException: public std::exception
 	{

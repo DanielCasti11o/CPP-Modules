@@ -3,17 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
+/*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:06:25 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/20 18:32:49 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/01/27 16:34:39 by dacastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Bureaucrat.hpp"
+# include "Form.hpp"
 
 Bureaucrat::Bureaucrat(void) : name("Philip"), grade(150)
 {
+	if (this->grade < 1)
+		throw (Bureaucrat::GradeTooHighException());
+	if (this->grade > 150)
+		throw (Bureaucrat::GradeTooLowException());
 }
 
 Bureaucrat::~Bureaucrat(void)
@@ -30,7 +35,6 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade)
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.grade)
 {
-	*this = other;
 	if (this->grade < 1)
 		throw (Bureaucrat::GradeTooHighException());
 	if (this->grade > 150)
@@ -93,4 +97,19 @@ char const	*Bureaucrat::GradeTooLowException::what(void) const throw()
 std::ostream	&operator<<(std::ostream &str, Bureaucrat const &b)
 {
 	return (str << b.GetName() << ", bureaucrat grade " << b.GetGrade() << std::endl);
+}
+
+// sign form
+
+void Bureaucrat::signForm(Form &f)
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << this->name << " signed " << f.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->GetName() << " couldn’t sign " << f.getName() << " because " << e.what() << std::endl;
+	}
 }
