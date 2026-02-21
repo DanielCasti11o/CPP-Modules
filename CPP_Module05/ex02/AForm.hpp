@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:56:19 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/27 17:17:07 by dacastil         ###   ########.fr       */
+/*   Updated: 2026/02/21 13:35:55 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <cstdlib>
+# include <fstream>
 # include "Bureaucrat.hpp"
 
 class AForm
@@ -51,6 +52,12 @@ class AForm
 	{
 		public:
 			virtual char const	*what(void) const throw();
+	};
+
+	class FormNotSignedException: public std::exception
+	{
+		public:
+		virtual char const	*what(void) const throw();
 	};
 };
 

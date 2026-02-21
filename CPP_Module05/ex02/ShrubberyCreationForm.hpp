@@ -6,18 +6,23 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:22:48 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/04 17:23:08 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 13:19:24 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-class ShrubberyCreationForm
+class ShrubberyCreationForm : public AForm
 {
 private:
-	/* data */
+	std::string m_target;
 public:
-	ShrubberyCreationForm(/* args */);
+	ShrubberyCreationForm();
+	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(const ShrubberyCreationForm &other);
 	~ShrubberyCreationForm();
+
+	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm &other);
+	void	beExecuted(Bureaucrat const &executor) const;
 };
 

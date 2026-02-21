@@ -6,8 +6,12 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:22:06 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/04 17:22:37 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 13:44:55 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm() : m_target("Robotil"), AForm()
+{
+}

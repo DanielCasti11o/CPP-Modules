@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:21:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/04 17:21:58 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 13:43:37 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 class RobotomyRequestForm
 {
 private:
-	/* data */
+	std::string m_target;
 public:
-	RobotomyRequestForm(/* args */);
+	RobotomyRequestForm();
+	RobotomyRequestForm(std::string m_target);
+	RobotomyRequestForm(const RobotomyRequestForm &other);
 	~RobotomyRequestForm();
+
+	RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
+	void	beExecuted(Bureaucrat const &executor)const;
 };
