@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:23:11 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/21 13:39:54 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 14:12:02 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,18 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
 {
-	this->m_target = other.m_target;
-	return (*this);
+	if (this != &other)
+	{
+		AForm::operator=(other);
+		m_target = other.m_target;
+	}
+	return *this;
+}
+
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : m_target(other.m_target), AForm(other)
+{
 }
 
 void	ShrubberyCreationForm::beExecuted(Bureaucrat const &executor) const
