@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:56:19 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/21 13:35:55 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 16:58:04 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AForm
 	public:
 
 	AForm();
-	AForm(const Form &other);
+	AForm(const AForm &other);
 	AForm(const std::string name, const int gradeToSi, const int gradeToEx);
 	virtual ~AForm();
 
@@ -40,7 +40,7 @@ class AForm
 	bool				stateSigned(void) const;
 
 	void				beSigned(const Bureaucrat &b);
-	virtual	void		execute(Bureaucrat const & executor) const;
+	virtual	void		execute(Bureaucrat const & executor) const = 0;
 
 		class GradeTooHighException: public std::exception
 	{
@@ -61,6 +61,6 @@ class AForm
 	};
 };
 
-std::ostream	&operator<<(std::ostream &str, const Form &f);
+std::ostream	&operator<<(std::ostream &str, const AForm &f);
 
 #endif

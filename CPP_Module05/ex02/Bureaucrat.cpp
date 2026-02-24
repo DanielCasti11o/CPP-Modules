@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dacastil <dacastil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:06:25 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/01/27 16:34:39 by dacastil         ###   ########.fr       */
+/*   Updated: 2026/02/21 16:15:11 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Bureaucrat.hpp"
-# include "Form.hpp"
+# include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(void) : name("Philip"), grade(150)
 {
@@ -101,7 +101,7 @@ std::ostream	&operator<<(std::ostream &str, Bureaucrat const &b)
 
 // sign form
 
-void Bureaucrat::signForm(Form &f)
+void Bureaucrat::signForm(AForm &f)
 {
 	try
 	{
@@ -111,5 +111,18 @@ void Bureaucrat::signForm(Form &f)
 	catch(const std::exception& e)
 	{
 		std::cerr << this->GetName() << " couldn’t sign " << f.getName() << " because " << e.what() << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(AForm const &f)
+{
+	try
+	{
+		f.execute(*this);
+		std::cout << this->GetName() << " executed!! " << f.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->GetName() << " couldn’t execute " << f.getName() << " because " << e.what() << std::endl;
 	}
 }

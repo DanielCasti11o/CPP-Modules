@@ -6,18 +6,18 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:23:11 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/21 14:12:02 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 16:53:30 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : m_target("Letrero") , AForm("Shrubbery Creation Form", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shrubbery Creation Form", 145, 137), m_target("Letrero")
 {
 
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : m_target(target), AForm("Shrubbery Creation Form", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrubbery Creation Form", 145, 137), m_target(target)
 {
 }
 
@@ -35,11 +35,11 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	return *this;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : m_target(other.m_target), AForm(other)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : AForm(other), m_target(other.m_target)
 {
 }
 
-void	ShrubberyCreationForm::beExecuted(Bureaucrat const &executor) const
+void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	if (!stateSigned())
 		throw FormNotSignedException();

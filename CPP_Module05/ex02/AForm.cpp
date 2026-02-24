@@ -91,6 +91,14 @@ void	AForm::beSigned(const Bureaucrat &b)
 
 std::ostream	&operator<<(std::ostream &str, const AForm &f)
 {
-	return (str << f.getName() << "Signed (1: yes / 0: no) = [" << f.stateSigned() << "]" << ", grade to sign is " << f.getGradeToSign() << " and grade to execute is " << f.getGradeToExecute() << std::endl);
+	str << "Name: " << f.getName() << std::endl;
+	str << "Signed (1: yes || 0: No) -> ";
+	if (!f.stateSigned())
+		str << "[No]" << std::endl;
+	else
+		str << "[Yes]" << std::endl;
+	str << "The grade to sign is: " << f.getGradeToSign() << std::endl;
+	str << "The grade to exexute is: " << f.getGradeToExecute() << std::endl;
+	return (str);
 }
 

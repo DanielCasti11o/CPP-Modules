@@ -6,7 +6,7 @@
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:21:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/02/21 13:59:41 by daniel-cast      ###   ########.fr       */
+/*   Updated: 2026/02/21 15:52:26 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ public:
 	~RobotomyRequestForm();
 
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
-	void	beExecuted(Bureaucrat const &executor)const;
+	void	execute(Bureaucrat const &executor)const;
 };
