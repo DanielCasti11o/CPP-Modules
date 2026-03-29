@@ -5,26 +5,9 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:51:21 by dacastil          #+#    #+#             */
-/*   Updated: 2026/02/28 16:15:05 by daniel-cast      ###   ########.fr       */
+/*   Created: 2026/03/28 15:37:56 by daniel-cast       #+#    #+#             */
+/*   Updated: 2026/03/28 15:38:05 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "Bureaucrat.hpp"
-
-int main(void)
-{
-	Bureaucrat rff("Reffers", 104);
-	Form fm("ItalyProject", 102, 107);
-
-	try
-	{
-		rff.signForm(fm);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-
-}
+# include "ScalarConverter.hpp"

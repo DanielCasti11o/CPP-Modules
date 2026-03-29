@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 17:21:33 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/03/29 14:21:21 by daniel-cast      ###   ########.fr       */
+/*   Created: 2026/02/04 17:19:47 by daniel-cast       #+#    #+#             */
+/*   Updated: 2026/02/21 16:12:06 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
-# include <ctime>
 
-class RobotomyRequestForm : public AForm
+# define RED "\033[31m"
+# define RESET "\033[0m"
+
+class PresidentialPardonForm : public AForm
 {
 private:
-	std::string m_target;
+	std::string	m_target;
 public:
-	RobotomyRequestForm();
-	RobotomyRequestForm(std::string m_target);
-	RobotomyRequestForm(const RobotomyRequestForm &other);
-	~RobotomyRequestForm();
+	PresidentialPardonForm();
+	PresidentialPardonForm(std::string m_target);
+	PresidentialPardonForm(const PresidentialPardonForm &other);
 
-	RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
-	void	execute(Bureaucrat const &executor)const;
+	PresidentialPardonForm	&operator=(const PresidentialPardonForm &other);
+	void	execute(Bureaucrat const &other) const;
+	~PresidentialPardonForm();
 };
+
+

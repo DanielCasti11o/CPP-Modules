@@ -5,26 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:51:21 by dacastil          #+#    #+#             */
-/*   Updated: 2026/02/28 16:15:05 by daniel-cast      ###   ########.fr       */
+/*   Created: 2026/02/04 14:39:33 by daniel-cast       #+#    #+#             */
+/*   Updated: 2026/03/29 19:07:36 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
-	Bureaucrat rff("Reffers", 104);
-	Form fm("ItalyProject", 102, 107);
 
-	try
 	{
-		rff.signForm(fm);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
+		std::cout << "\n--- Test del Intern ---" << std::endl;
+		Intern someRandomIntern;
+		AForm* form;
+
+		form = someRandomIntern.makeForm("shrubbery creation", "garden");
+		if (form)
+			delete form;
+
+		form = someRandomIntern.makeForm("robotomy request", "Bender");
+		if (form)
+			delete form;
+
+		form = someRandomIntern.makeForm("presidential pardon", "Trillian");
+		if (form)
+			delete form;
+
+		form = someRandomIntern.makeForm("invalid form", "target");
+		(void)form;
 	}
 
+	return (0);
 }

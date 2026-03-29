@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:51:21 by dacastil          #+#    #+#             */
-/*   Updated: 2026/02/28 16:15:05 by daniel-cast      ###   ########.fr       */
+/*   Created: 2026/03/29 14:38:32 by daniel-cast       #+#    #+#             */
+/*   Updated: 2026/03/29 14:39:42 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "Bureaucrat.hpp"
+#ifndef INTERN_HPP
+# define INTERN_HPP
 
-int main(void)
+# include "AForm.hpp"
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
+
+class Intern
 {
-	Bureaucrat rff("Reffers", 104);
-	Form fm("ItalyProject", 102, 107);
+public:
+	Intern();
+	Intern(const Intern& src);
+	~Intern();
+	Intern& operator=(const Intern& rhs);
 
-	try
-	{
-		rff.signForm(fm);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	AForm* makeForm(std::string formName, std::string target);
+};
 
-}
+#endif

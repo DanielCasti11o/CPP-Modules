@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:51:21 by dacastil          #+#    #+#             */
-/*   Updated: 2026/02/28 16:15:05 by daniel-cast      ###   ########.fr       */
+/*   Created: 2026/02/04 17:22:48 by daniel-cast       #+#    #+#             */
+/*   Updated: 2026/02/21 15:52:32 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
-int main(void)
+class ShrubberyCreationForm : public AForm
 {
-	Bureaucrat rff("Reffers", 104);
-	Form fm("ItalyProject", 102, 107);
+private:
+	std::string m_target;
+public:
+	ShrubberyCreationForm();
+	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(const ShrubberyCreationForm &other);
+	~ShrubberyCreationForm();
 
-	try
-	{
-		rff.signForm(fm);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm &other);
+	void	execute(Bureaucrat const &executor) const;
+};
 
-}
