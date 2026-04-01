@@ -1,13 +1,14 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/28 15:37:56 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/03/28 15:38:05 by daniel-cast      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "ScalarConverter.hpp"
 
-# include "ScalarConverter.hpp"
+int main(int argc, char **argv)
+{
+	if (argc != 2)
+	{
+		std::cout << RED << "Usage: ./convert <literal>" << RESET << std::endl;
+		return (1);
+	}
+	std::cout << GREEN;
+	ScalarConverter::convert(argv[1]);
+	std::cout << RESET;
+	return (0);
+}
