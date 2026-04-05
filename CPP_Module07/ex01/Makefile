@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/05 17:59:13 by daniel-cast       #+#    #+#              #
-#    Updated: 2026/04/05 18:35:54 by daniel-cast      ###   ########.fr        #
+#    Created: 2026/04/05 18:39:51 by daniel-cast       #+#    #+#              #
+#    Updated: 2026/04/05 18:39:57 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Whatever
+NAME = Iter
 SRC = main.cpp
 CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98

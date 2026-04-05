@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.cpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/05 17:59:34 by daniel-cast       #+#    #+#             */
-/*   Updated: 2026/04/05 17:59:48 by daniel-cast      ###   ########.fr       */
+/*   Created: 2026/04/05 18:40:23 by daniel-cast       #+#    #+#             */
+/*   Updated: 2026/04/05 18:40:44 by daniel-cast      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#ifndef ITER_HPP
+# define ITER_HPP
 
-whatever::whatever(/* args */)
-{
-}
 
-whatever::~whatever()
-{
-}
+
+#endif
