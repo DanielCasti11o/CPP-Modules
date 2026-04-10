@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: daniel-castillo <daniel-castillo@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/10 23:21:49 by daniel-cast       #+#    #+#              #
-#    Updated: 2026/04/10 23:22:33 by daniel-cast      ###   ########.fr        #
+#    Created: 2026/04/10 23:23:25 by daniel-cast       #+#    #+#              #
+#    Updated: 2026/04/10 23:23:26 by daniel-cast      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Span
-SRC = main.cpp Span.cpp
+NAME = ex02
+SRC = main.cpp
 CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
