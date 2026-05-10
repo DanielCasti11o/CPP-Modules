@@ -69,6 +69,9 @@ int main()
 
 	try
 	{
+		for (std::deque<int>::iterator it = d.begin(); it != d.end(); ++it)
+			std::cout << *it << std::endl;
+		std::cout << d.front() << std::endl;
 		easyfind(d, 500);
 		std::cout << "Deque: Found value" << std::endl;
 	}
